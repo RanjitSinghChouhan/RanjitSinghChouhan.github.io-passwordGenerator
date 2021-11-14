@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Oswald', sans-serif;
+    background-color: #39378f;
+}
+.pg{
+    text-align: center;
+    color: white;
+}
+.password-generator{
+    padding: 1rem 1.5rem;
+    border: 1px solid black;
+    width: 350px;
+    background-color: #4abd15;
+    
+}
+#writepass{
+    width: 100%;
+    height: 45px;
+    font-size: 24px;
+    border-width: 0;
+    background-color: #4abd15;
+    z-index: 2;
+}
+.pg-checkbox_setting{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: wheat;
+    box-shadow: 0 2px 8px rgb(1 1 1 / 15%);
+    display: flex;
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto 10px;
+    padding: 10px 0px;
+    border-top: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-style: solid;
+    border-color: #eaeaea;
+
+}
+
+#slidevalue{
+    color: red;
+}
+#myrange{
+    width: 100%;
+}
+.customizing_length-password{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.option{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+}
+.result__container {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 0 5px;
+    }
+    
+    .result-container #result {
+    word-wrap: break-word;
+    max-width: calc(100% - 40px);
+    }
+    
+    .result__container #copy {
+    height: 40px;
+    width: 40px;
+    background-color: #eb1606;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    }
+    
+    .result__container #copy:hover {
+    background-color: #1c2541;
+    color: #ffffff;
+    }
+#generate {
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #0b132b;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+#generate:hover {
+    background-color: #5bc0be;
+    color: #ffffff;
+}

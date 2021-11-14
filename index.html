@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranjit's Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="password-generator">
+        <h1 class="pg">Password Generator</h1>
+        <div class="result__container">
+            <span id="result"><input type="text" id="writepass"></span>
+            <button id="copy">Copy</button>
+        </div>
+        <div class="customizing_length" id="length">
+            <div class="customizing_length-password">
+                <label>Password Length <span id="slidevalue"></span></label>
+            </div>    
+            <div>
+                <input value="4" class="customizing_length-number" id="myrange" step="1" type="range" min="1" max="20"> 
+            </div>
+        </div>
+        <div class="pg-settings_checkbox-wrap"><label class="pg-settings_checkbox-wrap-label" for="pg-settings">Settings</label>
+            <form class="pg-checkbox_setting">
+                <div class="option">
+                    <label><strong>Include Uppercase</strong></label>
+                    <input type="checkbox" id="uppercase" checked>
+                </div>
+            </form>
+            <form class="pg-checkbox_setting">
+                <div class="option" id>
+                    <label class="pg-checkbox_label" for="pg-lowercase"><strong>Include Lowercase</strong></label>
+                    <input class="pg-checkbox_input" checked="checked" id="lowercase" type="checkbox" name="lowercase">
+                </div>
+            </form>
+            <form class="pg-checkbox_setting">
+                <div class="option">
+                    <label class="pg-checkbox_label" for="pg-numbers"> <strong>Include Numbers</strong></label>
+                    <input class="pg-checkbox_input" checked="checked" id="numbers" type="checkbox" name="numbers">
+                </div>
+            </form>
+            <form class="pg-checkbox_setting">
+                <div class="option">
+                    <label class="pg-checkbox_label" for="pg-symbols"><strong>Include Symbols</strong></label>
+                    <input class="pg-checkbox_input" checked="checked" id="symbols" type="checkbox" name="symbols">
+                </div>
+            </form>
+        </div>
+        <div>
+            <button class="btn" id="generate" type="submit">
+                 GENERATE PASSWORD
+            </button>
+        </div>
+    </div>
+</body>
+</html>
