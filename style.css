@@ -5,24 +5,28 @@
 }
     
 body {
-    height: 100vh;
-    width: 100vw;
+    height: 100vh; 
+    width: 100vw; 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-family: 'Oswald', sans-serif;
-    background-color: #39378f;
+    background-color: cornsilk;
 }
 .pg{
     text-align: center;
     color: white;
+    font-size: 30px;
 }
 .password-generator{
     padding: 1rem 1.5rem;
     border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px darkcyan;
     width: 350px;
-    background-color: #4abd15;
+    background-color: rgb(3, 49, 49);
+    color: white;
     
 }
 #writepass{
@@ -30,8 +34,12 @@ body {
     height: 45px;
     font-size: 24px;
     border-width: 0;
-    background-color: #4abd15;
+    background-color: rgb(3, 49, 49);
+    color: white;
     z-index: 2;
+}
+.result__container{
+    border-color: wheat;
 }
 .pg-checkbox_setting{
     border: 1px solid;
@@ -49,11 +57,10 @@ body {
     border-left: 1px;
     border-style: solid;
     border-color: #eaeaea;
-
 }
 
 #slidevalue{
-    color: red;
+    color:white;
 }
 #myrange{
     width: 100%;
@@ -62,10 +69,6 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 4px;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .option{
@@ -78,9 +81,8 @@ body {
     height: 50px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 0 5px;
     }
     
@@ -89,20 +91,6 @@ body {
     max-width: calc(100% - 40px);
     }
     
-    .result__container #copy {
-    height: 40px;
-    width: 40px;
-    background-color: #eb1606;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    }
-    
-    .result__container #copy:hover {
-    background-color: #1c2541;
-    color: #ffffff;
-    }
 #generate {
     height: 40px;
     width: 100%;
