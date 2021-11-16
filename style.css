@@ -18,12 +18,13 @@ body {
     text-align: center;
     color: white;
     font-size: 30px;
+    margin-bottom: 20px;
 }
 .password-generator{
     padding: 1rem 1.5rem;
     border: 1px solid black;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px darkcyan;
+    box-shadow: 2px 2px 2px rgb(224, 241, 241);
     width: 350px;
     background-color: rgb(3, 49, 49);
     color: white;
@@ -57,12 +58,13 @@ body {
     border-left: 1px;
     border-style: solid;
     border-color: #eaeaea;
+
 }
 
 #slidevalue{
     color:white;
 }
-#myrange{
+#len{
     width: 100%;
 }
 .customizing_length-password{
@@ -81,6 +83,7 @@ body {
     height: 50px;
     width: 100%;
     display: flex;
+    /* justify-content: space-between; */
     align-items: center;
     border: 1px solid white;
     padding: 0 5px;
@@ -91,7 +94,7 @@ body {
     max-width: calc(100% - 40px);
     }
     
-#generate {
+#submit {
     height: 40px;
     width: 100%;
     border-radius: 10px;
@@ -103,7 +106,7 @@ body {
     cursor: pointer;
     outline: none;
 }
-#generate:hover {
+#submit:hover {
     background-color: #5bc0be;
     color: #ffffff;
 }
