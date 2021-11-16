@@ -89,10 +89,10 @@ body {
     padding: 0 5px;
     }
     
-    .result-container #result {
+ .result-container #result {
     word-wrap: break-word;
     max-width: calc(100% - 40px);
-    }
+ }
     
 #submit {
     height: 40px;
