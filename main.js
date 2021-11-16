@@ -1,24 +1,4 @@
-const resultDOM = document.getElementById('result');
-const copybtnDOM = document.getElementById('copy');
-const lengthDOM = document.getElementById('length');
-const uppercaseDOM = document.getElementById('uppercase');
-const lowercaseDOM = document.getElementById('lowercase');
-const numbersDOM = document.getElementById('numbers');
-const symbolsDOM = document.getElementById('symbols');
-const generatebtn = document.getElementById('generate');
-const form = document.getElementById('password-generator');
-
-// Generating Character Codes For The Application 
-const UPPERCASE_CODES = arrayFromLowToHigh(65, 90);
-const LOWERCASE_CODES = arrayFromLowToHigh(97, 122);
-const NUMBER_CODES = arrayFromLowToHigh(48, 57);
-const SYMBOL_CODES = arrayFromLowToHigh(33, 47)
-  .concat(arrayFromLowToHigh(58, 64))
-  .concat(arrayFromLowToHigh(91, 96))
-  .concat(arrayFromLowToHigh(123, 126));
-
-// slider scale value
-var slider = document.getElementById("myrange");
+var slider = document.getElementById("len");
 var output = document.getElementById("slidevalue");
 output.innerHTML = slider.value;
   
@@ -26,14 +6,69 @@ slider.oninput = function() {
     output.innerHTML = this.value;
 }
 
-// Copy Password
+const generate = document.getElementById('submit');
+const result = document.getElementById("result");
 
+generate.addEventListener('click', () =>{
+    const x = document.getElementById('len');
+    const length = +x.value;
+    const lower = document.getElementById('lowercase').checked;
+    const upper = document.getElementById('uppercase').checked;
+    const number = document.getElementById('numbers').checked;
+    const symbols = document.getElementById('symbols').checked;
+    const arr = [];
+    if(lower)
+        arr.push('lower');
+    if(upper)
+        arr.push('upper');
+    if(number)
+        arr.push('number');
+    if(symbols)
+        arr.push('symbols');
+    let password = genPwd(length, arr);
+    result.innerHTML = `<p>${password}</p>`;
 
-// The Character Code Generating Function
-function arrayFromLowToHigh(low, high) {
-  const array = [];
-  for (let i = low; i <= high; i++) {
-    array.push(i);
-  }
-  return array;
+});
+
+function genPwd(length, arr){
+    let password = '';
+    let count = 0;
+    while(count < length){
+        let x = arr[Math.floor(Math.random() * arr.length)];
+        switch(x){
+            case 'lower':
+                password += createLower();
+                break;
+            case 'upper':
+                password += createUpper();
+                break;
+            case 'number':
+                password += createNumber();
+                break;
+            case 'symbols':
+                password += createSymbol();
+                break;
+        }
+        count++;
+    }
+    return password;
+}
+
+function createLower(){
+    return String.fromCharCode(Math.floor(Math.random()*26)+97);
+}
+
+function createUpper(){
+    return String.fromCharCode(Math.floor(Math.random()*26)+ 65 );
+}
+
+function createNumber(){
+    return String.fromCharCode(Math.floor(Math.random()*10)+48);
+}
+
+function createSymbol(){
+    const symbols='!@#$~%^&*()+=[]{}<>?/,.';
+    return symbols[Math.floor(Math.random()*symbols.length)];
+}
+
 }
