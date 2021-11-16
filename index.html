@@ -19,37 +19,37 @@
                 <label>Password Length <span id="slidevalue"></span></label>
             </div>    
             <div>
-                <input value="4" class="customizing_length-number" id="myrange" step="1" type="range" min="1" max="20"> 
+                <input value="4" class="customizing_length-number" id="len" step="1" type="range" min="1" max="20"> 
             </div>
         </div>
         <div class="pg-settings_checkbox-wrap"><label class="pg-settings_checkbox-wrap-label" for="pg-settings">Settings</label>
             <form class="pg-checkbox_setting">
                 <div class="option">
-                    <label><strong>Include Uppercase</strong></label>
-                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase"><strong>Include Uppercase</strong></label>
+                    <input type="checkbox" id="uppercase" value="upper" name="characters" checked>
                 </div>
             </form>
             <form class="pg-checkbox_setting">
                 <div class="option" id>
-                    <label class="pg-checkbox_label" for="pg-lowercase"><strong>Include Lowercase</strong></label>
-                    <input class="pg-checkbox_input" checked="checked" id="lowercase" type="checkbox" name="lowercase">
+                    <label for="lowercase"><strong>Include Lowercase</strong></label>
+                    <input id="lowercase" type="checkbox" value="lower" name="characters" checked>
                 </div>
             </form>
             <form class="pg-checkbox_setting">
                 <div class="option">
-                    <label class="pg-checkbox_label" for="pg-numbers"> <strong>Include Numbers</strong></label>
-                    <input class="pg-checkbox_input" checked="checked" id="numbers" type="checkbox" name="numbers">
+                    <label for="numbers"> <strong>Include Numbers</strong></label>
+                    <input id="numbers" type="checkbox" name="numbers" value="characters" checked>
                 </div>
             </form>
             <form class="pg-checkbox_setting">
                 <div class="option">
-                    <label class="pg-checkbox_label" for="pg-symbols"><strong>Include Symbols</strong></label>
-                    <input class="pg-checkbox_input" checked="checked" id="symbols" type="checkbox" name="symbols">
+                    <label for="symbols"><strong>Include Symbols</strong></label>
+                    <input id="symbols" type="checkbox" name="symbols" value="characters" checked>
                 </div>
             </form>
         </div>
         <div>
-            <button class="btn" id="generate" type="submit">
+            <button class="btn" id="submit" type="button" name="genpwd">
                  GENERATE PASSWORD
             </button>
         </div>
