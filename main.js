@@ -71,4 +71,3 @@ function createSymbol(){
     return symbols[Math.floor(Math.random()*symbols.length)];
 }
 
-}
